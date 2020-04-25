@@ -1,0 +1,58 @@
+/* // THIS IS THE GLOBALS VARIABLES FOR THE APPLICATION; */
+
+:root {
+  /* // FONTS:==> */
+  --sudoFont: "Dosis", sans-serif; /*  // for normal context */
+  --subFont: "Bitter", serif; /*  // for headings */
+  /* // $specialFont: */
+
+  /* // COLOURS:==> */
+  /* // gradients:- */
+  --sudoGrd: linear-gradient(244deg, #f3762d, #f1c532, #095080);
+  --subGrd: linear-gradient(154deg, #f1c532, #1dcec5, #0f90a7);
+  --subGrdOverlay: linear-gradient(154deg, #0000002f, #09508052, #0000003f);
+
+  /* // solids:- */
+  --sudoClr: #f3762d;
+  --subClr: #f1c532;
+  --sub00Clr: #f1c432bb;
+  --sub0Clr: #3c3c46;
+  --sub1Clr: #ddd;
+  --sub2Clr: #ccc9;
+  --sub3Clr: #ccc;
+  --sub4Clr: #444;
+  --sub5Clr: #ddd9;
+  --sub6Clr: #f1f1f1e8;
+  --whiteClr: #f0ffff;
+  --sub7Clr: #ececec;
+
+  /* // MEASURES:==> */
+  /* // fonts:- */
+  --sudoM: 2rem;
+  --sub1: 3rem;
+  --sub2: 14px;
+  --sub3: 16rem;
+  --sub4: 18rem;
+  --sub5: 20rem;
+
+  /* // transitions:- */
+  --sudoTrans: all cubic-bezier(0.76, 0.06, 0.18, 0.93) 0.3s;
+  --subTrans: all ease 0.3s;
+
+  /* // shadows:- */
+  --sudoShw: 3px 2px 20px -6px #000;
+  --subShw: 3px 2px 20px -6px #555;
+
+  /* // borders:- */
+  --sudoBBd: 2px solid var(--sudoClr); /*  // sudo bold border */
+  --sudoLBd: 1px solid var(--sudoClr); /*  // sudo light bold border */
+  --subBd: 1px solid var(--subClr);
+  --sub1Bd: 1px solid var(--sub1Clr);
+  --sub2Bd: 1px solid var(--sub2Clr);
+  --sub3Bd: 1px solid var(--sub3Clr);
+  --sub4Bd: 1px solid var(--sub5Clr);
+
+  --DashBd: 1px dashed var(--sub3Clr); /*  // dashed border */
+}
+
+/* // END OF CONTEXT !! */
