@@ -11,12 +11,12 @@ class Sidebar extends React.Component {
   render() {
     return (
       <AppConsumer>
-        {value => {
+        {(value) => {
           const { LinksData, toggleSideBar } = value;
           return (
             <AsideBar toggler={toggleSideBar}>
               <ul>
-                {LinksData.map(link => (
+                {LinksData.map((link) => (
                   <li key={link.id}>
                     <Link to={link.path}>{link.text}</Link>
                   </li>
@@ -38,12 +38,12 @@ const AsideBar = styled.aside`
   width: 100%;
   padding: 30px 18px 0 10px;
   position: fixed;
-  top: 9.8%;
+  top: 50px;
   z-index: 10;
   left: 0px;
   transition: var(--sudoTrans);
   bottom: 0;
-  transform: ${props =>
+  transform: ${(props) =>
     props.toggler ? "translateX(0)" : "translateX(-100%)"};
 
   ul {

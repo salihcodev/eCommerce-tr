@@ -47,7 +47,7 @@ export default Navbar;
 // STYLING COMPONENTS:==>
 const Nav = styled.nav`
   background: var(--sub7Clr);
-  padding: 10px 30px;
+  padding: 2px 30px;
   border-bottom: var(--sub4Bd);
   position: fixed;
   left: 0;
@@ -58,12 +58,12 @@ const Nav = styled.nav`
 
 const SideToggler = styled.i`
   font-size: 25px;
-  margin-top: -12px;
+  margin-top: 0;
   cursor: pointer;
 `;
 const CartIcon = styled.i`
   font-size: 25px;
-  margin-top: -12px;
+  margin-top: 0;
   position: relative;
   cursor: pointer;
 `;
@@ -86,5 +86,4 @@ const ItemsFlag = styled.span`
   text-align: center;
   padding: 2px 2px 0 0;
   font-weight: bolder;
-  /* color: var(--whiteClr) */
 `;

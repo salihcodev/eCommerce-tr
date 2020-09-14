@@ -23,7 +23,7 @@ class FeaturedProducts extends React.Component {
                   <div className="container">
                     <div className="row">
                       {featuredProducts.map((product) => (
-                        <div className="col-md-4 col-sm-12">
+                        <div className="col-md-4 col-sm-6 col-xs-12">
                           <ProductTemplate
                             key={product.id}
                             product={product}
@@ -44,7 +44,6 @@ class FeaturedProducts extends React.Component {
 
 export default FeaturedProducts;
 const FeaturedProductsWarper = styled.section`
-  background: #dddd;
 
   h1 {
     text-align: center;

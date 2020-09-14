@@ -49,11 +49,19 @@ export default ProductTemplate;
 
 const ProductPlaceHolder = styled.div`
   .product-wrapper {
-    border: 1px solid #444;
+    border: 1px solid #ddd;
     position: relative;
     padding: 10px;
     min-height: 380px;
     margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &:hover {
+      .product-viewer {
+        top: 100px;
+      }
+    }
 
     .product-img {
       img {
@@ -64,18 +72,20 @@ const ProductPlaceHolder = styled.div`
 
     .product-viewer {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      min-width: 100%;
-      background: #00000042;
+      background: #fff9;
       padding: 40px;
-      text-align: center;
+      top: -150px;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all ease 0.3s;
 
       a {
         padding: 10px;
         font-size: 25px;
-        color: #fff;
+        color: #444;
       }
     }
   }

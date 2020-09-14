@@ -18,20 +18,20 @@ class Services extends React.Component {
         {
           id: 1,
           icon: <FaServer />,
-          description: "hello from the other side-",
-          title: "HellOo",
+          description: "hello from the other side",
+          title: "fast connection",
         },
         {
           id: 2,
           icon: <FaMixcloud />,
-          description: "hello from the other side --",
-          title: "HellOo",
+          description: "hello from the other side ",
+          title: "time management",
         },
         {
           id: 3,
           icon: <FaBookReader />,
-          description: "hello from the other side ---",
-          title: "HellOo",
+          description: "hello from the other side",
+          title: "packaging",
         },
       ],
     };
@@ -62,12 +62,27 @@ export default Services;
 
 // STYLING COMPONENTS:==>
 const ServicesWarper = styled.section`
-  padding: 10px 30px;
+  padding: 60px 30px;
   background: #ddd9;
 
   .serviceContainer {
-    border: 1px solid #555;
+    border: 1px solid #ddd;
     text-align: center;
     background: #fff;
+    position: relative;
+    padding: 10px;
+    min-height: 150px;
+
+    span.icon {
+      border: 1px solid #ddd;
+      width: 40px;
+      height: 40px;
+      display: block;
+      border-radius: 50%;
+      font-size: 20px;
+      position: absolute;
+      top: 34%;
+      left: -19px;
+    }
   }
 `;

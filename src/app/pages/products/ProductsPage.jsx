@@ -30,7 +30,7 @@ class ProductsPage extends React.Component {
                     <div className="container">
                       <div className="row">
                         {filteredProducts.map((product) => (
-                          <div className="col col-md-3 col-sm-6 col-xs-12">
+                          <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                             <ProductTemplate
                               key={product.id}
                               product={product}
