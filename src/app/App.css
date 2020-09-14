@@ -13,7 +13,6 @@ body {
   background: #f2feff91;
   font-family: var(--sudoFont) !important;
   color: var(--sub4Clr) !important;
-  font-size: var(--sub1);
   padding-top: 70px;
 }
 
