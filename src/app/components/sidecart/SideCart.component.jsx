@@ -20,49 +20,57 @@ class SideCart extends React.Component {
               <AsideCart toggler={toggleCart}>
                 <section className="cart-list-container">
                   <ul>
-                    {cartList.map((cartItem) => (
-                      <section key={cartItem.id} className="cart-item">
-                        <div className="item-headers">
-                          <div className="item-image">
-                            <img
-                              src={`../${cartItem.image}`}
-                              alt={`../${cartItem.image}`}
-                            />
+                    {cartList.length > 0 ? (
+                      cartList.map((cartItem) => (
+                        <section key={cartItem.id} className="cart-item">
+                          <div className="item-headers">
+                            <div className="item-image">
+                              <img
+                                src={`../${cartItem.image}`}
+                                alt={`../${cartItem.image}`}
+                              />
+                            </div>
+                            <h5 className="item-name">{cartItem.title}</h5>
                           </div>
-                          <h4 className="item-name">{cartItem.title}</h4>
-                        </div>
 
-                        <div className="item-context-info">
-                          <p className="item-source">
-                            this product provided by
-                            <span className="company">{cartItem.company}</span>
-                          </p>
-
-                          <div className="description-container">
-                            <button
-                              className="item-description-toggler"
-                              onClick={readMore}
-                            >
-                              {moreText
-                                ? "- hide description"
-                                : "+ view description"}
-                            </button>
-                            <p className="item-description">
-                              {moreText ? cartItem.description : null}
+                          <div className="item-context-info">
+                            <p className="item-source">
+                              this product provided by
+                              <span className="company">
+                                {cartItem.company}
+                              </span>
                             </p>
-                          </div>
-                        </div>
 
-                        <p className="item-numeric-info">
-                          <span className="item-price">
-                            price: ${cartItem.totalProductPrice}
-                          </span>
-                          <span className="item-count">
-                            items: {cartItem.count}
-                          </span>
-                        </p>
-                      </section>
-                    ))}
+                            <div className="description-container">
+                              <button
+                                className="item-description-toggler"
+                                onClick={readMore}
+                              >
+                                {moreText
+                                  ? "- hide description"
+                                  : "+ view description"}
+                              </button>
+                              <p className="item-description">
+                                {moreText ? cartItem.description : null}
+                              </p>
+                            </div>
+                          </div>
+
+                          <p className="item-numeric-info">
+                            <span className="item-price">
+                              price: ${cartItem.totalProductPrice}
+                            </span>
+                            <span className="item-count">
+                              items: {cartItem.count}
+                            </span>
+                          </p>
+                        </section>
+                      ))
+                    ) : (
+                      <h5 className="altCartTxt">
+                        add items to be displayed here
+                      </h5>
+                    )}
                   </ul>
                 </section>
               </AsideCart>
@@ -80,19 +88,26 @@ const AsideCart = styled.aside`
   width: 100%;
   padding: 20px 7px 0 10px;
   position: fixed;
-  top: 9.8%;
+  top: 50px;
   z-index: 10;
   overflow-y: scroll;
   right: 0;
   transition: var(--sudoTrans);
-  border-left: var(--subBd);
-  border-top: 4px solid var(--subClr);
+  border-left: 1px solid #ddd;
   bottom: 0;
   transform: ${(props) =>
     props.toggler ? "translateX(0)" : "translateX(100%)"};
 
   @media (min-width: 576px) {
     width: 18rem;
+  }
+
+  h5.altCartTxt {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    text-transform: uppercase;
+    color: #777;
   }
 
   .cart-list-container {
@@ -118,13 +133,18 @@ const AsideCart = styled.aside`
             height: 100%;
           }
         }
+
+        h5 {
+          text-align: center;
+          width: 100%;
+        }
       }
 
       .item-context-info {
         .item-source {
           span.company {
             font-weight: bolder;
-            font-size: 19px;
+            font-size: 16px;
             text-transform: capitalize;
             margin-left: 3px;
           }
@@ -153,14 +173,15 @@ const AsideCart = styled.aside`
 
         .item-price {
           width: 50px;
-          background: #f0cf64;
+          background: #353535;
           flex-grow: 2;
           padding: 2px 13px;
+          color: #fff;
         }
 
         .item-count {
           width: 50px;
-          background: #528bff;
+          background: #e8e8e8;
           padding: 2px 13px;
           flex-grow: 1;
         }
